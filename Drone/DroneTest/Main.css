@@ -1,0 +1,229 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 20px; */
+    border: 1px solid #000;
+    background-color: #000;
+    
+}
+
+
+.grid {
+    /* background-color: antiquewhite; */
+    background-color: rgb(211, 207, 202);
+    display: grid;
+    grid-template-columns: repeat(10, 45px);
+    grid-template-rows: repeat(10, 45px);
+    padding: 5px 5px 5px 5px;
+}
+ .grid div:hover{
+    background-color: #aa9e9e;
+ }
+
+.grid div {
+    width: 41px;
+    height: 41px;
+    /* border: 1px solid #000; */
+    border: 1px solid #b1a3a3;
+    overflow: hidden;
+    /* padding: 2px 2px 2px 2px; */
+
+}
+
+/* #output {
+    margin: 10px;
+    font-weight: bold;
+ } */
+
+.drone {
+    /* background-color: red;    */
+    /* border-radius: 50%;  */
+    /* background-image: url("./assets/north.png"); */
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.drone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    margin: 10px;
+    width: max-content;
+    height: 30px;
+    /* background-color: whitesmoke; */
+    background-color: black;
+    color: whitesmoke;
+    font-weight: 900;
+    box-shadow: 2px 5px 5px 2px rgba(247, 240, 240, 0.2);
+}
+
+button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+#moveBtn {
+    border-radius: 50%;
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+#attackBtn {
+    color: rgb(235, 79, 79);
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.3;
+}
+
+
+    .actionBtn{
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: 0.3;
+    }
+#info{
+    /* background-color: rgb(86, 148, 148); */
+    border-radius: 50%;
+    color: rgb(114, 192, 211) ;
+    font-weight: 800;
+}
+#info:hover{
+    background-color: #d6c3c3c4;
+    border-radius: 50%;
+    color: #000;
+    font-weight: 800;
+}
+@media screen and (max-width: 550px) {
+
+    .grid {
+        /* background-color: antiquewhite; */
+        background-color: rgb(211, 207, 202);
+
+        display: grid;
+        grid-template-columns: repeat(10, 30px);
+        grid-template-rows: repeat(10, 30px);
+        padding: 5px 5px 5px 5px;
+    }
+
+    .grid div {
+        width: 30px;
+        height: 30px;
+        /* border: 1px solid #000; */
+        border: 1px solid #b1a3a3;
+        overflow: hidden;
+        /* padding: 2px 2px 2px 2px; */
+
+    }
+    #report{
+        padding-left: -10px;
+        padding-right: 30px;
+    }
+    #outerBtns{
+        margin-left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 340px) {
+
+    .grid {
+        /* background-color: antiquewhite; */
+        background-color: rgb(211, 207, 202);
+        display: grid;
+        grid-template-columns: repeat(10, 20px);
+        grid-template-rows: repeat(10, 20px);
+        padding: 5px 5px 5px 5px;
+    }
+
+    .grid div {
+        width: 20px;
+        height: 20px;
+        /* border: 1px solid #000; */
+        border: 1px solid #b1a3a3;
+        overflow: hidden;
+        /* padding: 2px 2px 2px 2px; */
+    }
+    
+    
+    
+    #report{
+        
+        justify-content: flex-start;
+        margin-right: 60px;
+    }
+    #outerBtns{
+        padding-left: 70px;
+    }
+    
+
+    button {
+        margin: 5px;
+        width: max-content;
+        height: 20px;
+        /* background-color: whitesmoke; */
+        background-color: black;
+        color: whitesmoke;
+        font-weight: 500;
+        box-shadow: 2px 5px 5px 2px rgba(247, 240, 240, 0.2);
+    }
+
+}
+
+#outerBtns{
+    display: flex;
+    flex-direction: column;
+}
+#actionBtns{
+    display: flex;
+    flex-direction: row;
+}
+#place,#attack{
+    display: flex;
+    justify-content: center;
+}
+#o{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: aliceblue; */
+}
+#report{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    margin-left: 100px;
+    /* align-items: end; */
+}
+
+#title{
+    color: aliceblue;
+}
+
+#information{
+    display: none;
+    background-color: #aa9e9e;
+}
+
+#reportContainer{
+    display: none;
+background-color: rgb(211, 207, 202);
+padding: 5px 5px 5px 5px;
+}
+
+#warning{
+    color:red ;
+}
+#inputForm{
+    display: none;
+    background-color: rgb(211, 207, 202);
+    padding: 5px;
+}
+

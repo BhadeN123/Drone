@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Main.css">
+<title>Toy Drone Game</title>
+</head>
+
+<body>
+    <div id="title">--------------------Toy Drone-------------------</div>
+    
+      
+<div class="grid" id="grid"></div>
+<div id="information">
+    <h3>Read the instructions before playing the game</h3>
+    <h3>There are mainly 5 actions you can do in this game...</h3>
+        <h3>Until you place the drone , you are not able to perform any other action</h3>
+    <ul>
+        <li>
+            To place the drone
+            <p>Click on any place on the grid to place the drone</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;(or)</p>
+            <p>Click on place button and enter valid x and y coordinates (0 to 9) also enter the direction of the drone</p>
+        </li>
+        <li>
+            To move the drone
+            <p>Press the 'Arrow Up' key on keyboard to move the drone one step ahead in current direction</p>
+                        <p>&emsp;&emsp;&emsp;&emsp;&emsp;(or)</p>
+            <p>Click on move button to move the drone one step ahead in current direction</p>
+        </li>
+        <li>
+            To attack
+            <p>Attack will fire a projectile two units ahead in the current direction</p>
+            <p>Press the "Space bar" key on keyboard to attack</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;(or)</p>
+            <p>Click on attack button to attack </p>
+        </li>
+        <li>
+            To turn Left or Right
+      
+            <p>Press left arrow key to turn left (or) Press right arrow key to turn right</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;(or)</p>
+            <p>Click on left button to turn left (or) click on right button to turn right</p>
+        </li>
+        <li>
+            To report
+            <p>Report will tell the current location of drone</p>
+            <p>
+                Press "L" key on keyboard to report
+            </p>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;(or)</p>
+            <p>Click on report button to report</p>
+        </li>
+        </ul>
+        <button id="close">Close</button>
+</div>
+<div id="reportContainer">
+  <h2>Drone Report</h2>
+  <div id="droneLocation">Not reported yet</div>
+  <h4>Location History:</h4>
+  <div id="locationHistory"></div>
+  <button id="closeReports">Close</button>
+
+  </div>
+
+<div id="o">
+<div id="outerBtns">
+
+<div id="place">
+<button id="placeBtn">Place</button>
+<form id="inputForm">
+  <label for="x">X Coordinate (0-9):</label>
+  <input type="number" id="x" name="x" min="0" max="9" required>
+  <br>
+  <label for="y">Y Coordinate (0-9):</label>
+  <input type="number" id="y" name="y" min="0" max="9" required>
+  <br>
+  <label for="direction">Direction (North, South, East, or West):</label>
+  <input type="text" id="direction" name="direction" pattern="north|south|east|west" required>
+  <br>
+  <div id="warning" ></div>
+  <button type="button" onclick="validateAndPlace()">Place</button>  </form>
+</div>
+
+<div id="actionBtns">
+    <button id="leftBtn" class="actionBtn">Left</button>
+    <button id="moveBtn" class="actionBtn">Move</button>
+    <button id="rightBtn" class="actionBtn">Right</button>
+</div>
+
+<div id="attack">
+    <button id="attackBtn" class="actionBtn">Attack</button>
+</div>
+<!-- <div id="output"></div> -->
+</div>
+
+<div id="report">
+<button id="info">&ensp;i&ensp;</button>    
+<button id="reportBtn" class="actionBtn">Report</button>
+</div>
+
+</div>
+<script src="Main.js"></script>
+</body>
+
+
+</html>
